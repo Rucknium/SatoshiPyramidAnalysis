@@ -197,5 +197,11 @@ unpaid.df <- payin.payout.tx.df[(last.paid.out.ind + 1):nrow(payin.payout.tx.df)
 paid.df <- payin.payout.tx.df[1:last.paid.out.ind, ]
 
 
+write.csv(payin.tx.df, file = "data/payin_tx_df.csv", row.names = FALSE)
+write.csv(payout.tx.df, file = "data/payout_tx_df.csv", row.names = FALSE)
+write.csv(payin.payout.tx.df, file = "data/payin_payout_tx_df.csv", row.names = FALSE)
 
+saveRDS(payin.tx.df, file = "data/payin_tx_df.rds")
+saveRDS(payout.tx.df, file = "data/payout_tx_df.rds")
+saveRDS(payin.payout.tx.df, file = "data/payin_payout_tx_df.rds")
 
